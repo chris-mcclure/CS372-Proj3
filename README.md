@@ -25,6 +25,8 @@ Anything past 8 is just a more rounded circle but if we want to we can do it jus
 
 Each player has a paddle about 1/4 to 1/2 the size of their side, controls are very limited you can only move left or right on your side. You lose a point if the ball goes past you into your side, and the person who last touched the ball when it goes into your side gains a point. 
 
+[If you look at this video the rules make more sense](https://youtu.be/9mz-WmzgZyo?t=9) . This is how our game will work but we don't have to do the A to curve the ball at least initially. 
+
 The idea is for this to work locally with 4+ controllers at first but would like to be able to play on separate computers over the web. Using Unity we should be able to compile/play with no disparity between Linux, Windows, and OSX. 
 
 
