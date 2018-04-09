@@ -21,6 +21,8 @@ But if there are 3 players you gain a third side and the area becomes a triangle
 6 players it is a hexagon: 	⬡  
 etc
 
+Anything past 8 is just a more rounded circle but if we want to we can do it just kind of boring. 
+
 Each player has a paddle about 1/4 to 1/2 the size of their side, controls are very limited you can only move left or right on your side. You lose a point if the ball goes past you into your side, and the person who last touched the ball when it goes into your side gains a point. 
 
 The idea is for this to work locally with 4+ controllers at first but would like to be able to play on separate computers over the web. Using Unity we should be able to compile/play with no disparity between Linux, Windows, and OSX. 
