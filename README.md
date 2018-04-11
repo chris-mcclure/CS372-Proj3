@@ -36,6 +36,6 @@ Stretch goals:
 * Custom character models
 * random events 
 
-We are using in addition to plain git, [the Git Large File Storage addon](https://git-lfs.github.com/):
-  This can be installed rather easily, simply type **git lfs install** into your terminal of choice.
+We are using in addition to plain git, [the Git Large File Storage addon](https://git-lfs.github.com/):  
+  This can be installed rather easily, simply type **git lfs install** into your terminal of choice.  
 We are also using the [Github for Unity alpha plugin](https://github.com/github-for-unity/Unity) but its use cases are not apparent at the moment 
