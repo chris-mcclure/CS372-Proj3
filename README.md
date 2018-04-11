@@ -37,5 +37,8 @@ Stretch goals:
 * random events 
 
 We are using in addition to plain git, [the Git Large File Storage addon](https://git-lfs.github.com/):  
-  This can be installed rather easily, simply type **git lfs install** into your terminal of choice.  
-Note: Do not use the Github for Unity plugin it is trash
+  To install on Linux : ** curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash **  
+  To track files : git lfs track " [filename or \*.extension] "   
+  This is useful if we get files over 50MB which can happen.
+  
+Note: Do not use the Github for Unity plugin it is trash, use the terminal.
