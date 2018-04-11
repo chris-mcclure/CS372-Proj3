@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -530159753, guid: b671ed47be5f0b94db50eda2c84c8305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 3
+  lastUpdatedAtString: 2018-04-11T10:50:06.8104419-08:00
+  initializedAtString: 2018-04-11T10:42:51.6496619-08:00
+  log:
+  - commitID: f1c7418a354de0fdc560c3e34152288e03f24141
+    mergeA: 
+    mergeB: 
+    authorName: Cameron K. Titus
+    authorEmail: wirelessatari@gmail.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update README.md
+    description: Update README.md
+    timeString: 2018-04-09T15:11:30.0000000-08:00
+    commitTimeString: 2018-04-09T15:11:30.0000000-08:00
+    changes:
+    - path: README.md
+      fullPath: C:\Users\CKT\Documents\CS372-Proj3\README.md
+      projectPath: ..\README.md
+      originalPath: 
+      status: 3
+      staged: 0
+  - commitID: ee031cf992f9ce6ab5850085486033ec413ceedf
+    mergeA: 
+    mergeB: 
+    authorName: Cameron K. Titus
+    authorEmail: wirelessatari@gmail.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update README.md
+    description: Update README.md
+    timeString: 2018-04-09T15:04:37.0000000-08:00
+    commitTimeString: 2018-04-09T15:04:37.0000000-08:00
+    changes:
+    - path: README.md
+      fullPath: C:\Users\CKT\Documents\CS372-Proj3\README.md
+      projectPath: ..\README.md
+      originalPath: 
+      status: 3
+      staged: 0
+  - commitID: d3fb8d40fc00faa837bc7bcc6b40279f1bdde205
+    mergeA: 
+    mergeB: 
+    authorName: Cameron K. Titus
+    authorEmail: wirelessatari@gmail.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Update README.md
+    description: Update README.md
+    timeString: 2018-04-09T13:49:07.0000000-08:00
+    commitTimeString: 2018-04-09T13:49:07.0000000-08:00
+    changes:
+    - path: README.md
+      fullPath: C:\Users\CKT\Documents\CS372-Proj3\README.md
+      projectPath: ..\README.md
+      originalPath: 
+      status: 3
+      staged: 0
+  - commitID: 21ceb3171c2bf0eb57f78e2f8c4ba50c14890365
+    mergeA: 
+    mergeB: 
+    authorName: Cameron K. Titus
+    authorEmail: wirelessatari@gmail.com
+    commitEmail: noreply@github.com
+    commitName: GitHub
+    summary: Initial commit
+    description: Initial commit
+    timeString: 2018-04-09T13:33:57.0000000-08:00
+    commitTimeString: 2018-04-09T13:33:57.0000000-08:00
+    changes:
+    - path: .gitignore
+      fullPath: C:\Users\CKT\Documents\CS372-Proj3\.gitignore
+      projectPath: ..\.gitignore
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: LICENSE
+      fullPath: C:\Users\CKT\Documents\CS372-Proj3\LICENSE
+      projectPath: ..\LICENSE
+      originalPath: 
+      status: 4
+      staged: 0
+    - path: README.md
+      fullPath: C:\Users\CKT\Documents\CS372-Proj3\README.md
+      projectPath: ..\README.md
+      originalPath: 
+      status: 4
+      staged: 0
