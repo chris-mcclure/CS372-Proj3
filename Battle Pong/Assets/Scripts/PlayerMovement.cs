@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	}
-	
+
 	// Update is called once per frame
 	void FixedUpdate () {
 		if (this.GetComponent<Renderer>().bounds.Intersects (boundingLine.GetComponent<Renderer>().bounds)) {
