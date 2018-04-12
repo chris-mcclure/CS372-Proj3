@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
-	public float speed = 500f;
+	public float speed = 5f;
 	public GameObject boundingLine;
 
 
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour {
 	void FixedUpdate () {
 		if (this.GetComponent<Renderer>().bounds.Intersects (boundingLine.GetComponent<Renderer>().bounds)) {
 			Vector3 directionVector = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0, 0);
-			GetComponent<Rigidbody> ().MovePosition (transform.position + directionVector * Time.deltaTime);
+			GetComponent<Rigidbody> ().MovePosition (transform.position + directionVector * Time.deltaTime * speed);
 		}
 	}
 }
