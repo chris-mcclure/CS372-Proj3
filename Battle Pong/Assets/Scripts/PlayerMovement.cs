@@ -2,10 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class Bounds
+{
+	public float xMin, xMax;
+}
+
 public class PlayerMovement : MonoBehaviour {
 	public float speed = 5f;
 	public GameObject boundingLine;
+	public Bounds bounds;
 	private Rigidbody rb;
+	public float zVal;
+
+
 
 
 	// Use this for initialization
@@ -14,12 +24,17 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void FixedUpdate () {
-		if (this.GetComponent<Renderer>().bounds.Intersects (boundingLine.GetComponent<Renderer>().bounds)) {
-			Vector3 directionVector = new Vector3 (Input.GetAxisRaw ("Horizontal"), 0, 0);
-			rb.MovePosition (rb.position + directionVector * Time.deltaTime * speed);
-		}
+	void Update () {
 
-		//rb.position = new Vector3 (Mathf.Clamp (rb.position.x, xMin, xMax),0,0);
+		float horizontal = Input.GetAxis ("Horizontal");
+		rb.position = new Vector3 (Mathf.Clamp (rb.position.x, bounds.xMin, bounds.xMax),
+								   0.0f,
+								   zVal
+								  );
+
+		this.transform.localPosition = new Vector3 (Mathf.Clamp (this.transform.localPosition.x + horizontal * speed * Time.deltaTime, bounds.xMin, bounds.xMax),
+												    0.0f,
+													zVal
+												   );
 	}
 }
