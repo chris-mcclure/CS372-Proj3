@@ -17,4 +17,10 @@ public class BallMovement : MonoBehaviour {
 		movement = new Vector3(moveIntialX, 0, moveIntialZ);
 		rb.velocity = movement.normalized * speed;
 	}
+
+	void OnTriggerEnter (Collider c) {
+		if (c.gameObject.tag == "GoalP1" || c.gameObject.tag == "GoalP2") {
+			Destroy (gameObject);
+		}
+	}
 }
