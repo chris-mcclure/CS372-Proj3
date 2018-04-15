@@ -566,7 +566,7 @@ GameObject:
   - component: {fileID: 1220081233}
   m_Layer: 0
   m_Name: 2PlayerWall (Behind P1)
-  m_TagString: Untagged
+  m_TagString: BehindPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
