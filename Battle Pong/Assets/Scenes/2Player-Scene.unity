@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
->>>>>>> 8bc6ab98b3e215a9c477cbdaa96a182c05ac909f
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -236,8 +232,8 @@ MonoBehaviour:
   speed: 75
   boundingLine: {fileID: 1220081231}
   bounds:
-    xMin: -13
-    xMax: 13
+    xMin: -10.5
+    xMax: 10.5
   zVal: 24
 --- !u!54 &487225958
 Rigidbody:
@@ -570,7 +566,7 @@ GameObject:
   - component: {fileID: 1220081233}
   m_Layer: 0
   m_Name: 2PlayerWall (Behind P1)
-  m_TagString: BehindPlayer
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -965,8 +961,8 @@ MonoBehaviour:
   speed: 75
   boundingLine: {fileID: 306992952}
   bounds:
-    xMin: -13
-    xMax: 13
+    xMin: -10.5
+    xMax: 10.5
   zVal: -24
 --- !u!54 &1987526503
 Rigidbody:
@@ -1105,11 +1101,6 @@ Prefab:
     - target: {fileID: 1284645888124290, guid: ccec8826e1ae83146aa0fbb73cea731c, type: 2}
       propertyPath: m_Name
       value: Ball1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114441211675393936, guid: ccec8826e1ae83146aa0fbb73cea731c,
-        type: 2}
-      propertyPath: speed
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ccec8826e1ae83146aa0fbb73cea731c, type: 2}
