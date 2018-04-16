@@ -35,18 +35,18 @@ public class BallMovement : MonoBehaviour {
 	}
 
 	void ScoreKeeping() {
-		GameObject P1 = GameObject.Find ("P1");
+		GameObject P1 = GameObject.Find ("PlayerPrefab (1)");
 		PlayerMovement P1Script = (PlayerMovement) P1.GetComponent(typeof(PlayerMovement));
 
-		GameObject P2 = GameObject.Find ("P2");
+		GameObject P2 = GameObject.Find ("PlayerPrefab (2)");
 		PlayerMovement P2Script = (PlayerMovement) P2.GetComponent(typeof(PlayerMovement));
 
 		if (lastHitBy != null) {
-			if (lastHitBy.name == "P1") {
+			if (lastHitBy.name == "PlayerPrefab (1)") {
 				P1Script.setScore (P1Script.getScore () + 1);
 				P2Script.setScore (P2Script.getScore () - 1);
 			}
-			if (lastHitBy.name == "P2") {
+			if (lastHitBy.name == "PlayerPrefab (2)") {
 				P2Script.setScore (P2Script.getScore () + 1);
 				P1Script.setScore (P1Script.getScore () - 1);
 			}
