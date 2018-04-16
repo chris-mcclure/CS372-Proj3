@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class Bounds
@@ -14,6 +15,8 @@ public class PlayerMovement : MonoBehaviour {
 	public Bounds bounds;
 	private Rigidbody rb;
 	public float zVal;
+	private int score;
+	public Text scoreText;
 
 
 
@@ -21,6 +24,8 @@ public class PlayerMovement : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		rb = GetComponent<Rigidbody> ();
+		score = 0;
+		setScore (0);
 	}
 
 	// Update is called once per frame
@@ -36,5 +41,16 @@ public class PlayerMovement : MonoBehaviour {
 												    0.0f,
 													zVal
 												   );
+	}
+
+	public void setScore(int val) {
+		if (val < 0)
+			val = 0;
+		score = val;
+		scoreText.text = "Score : " + score.ToString ();
+	}
+
+	public int getScore() {
+		return score;
 	}
 }
