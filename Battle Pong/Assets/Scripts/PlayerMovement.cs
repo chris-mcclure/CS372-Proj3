@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float zVal;
 	private int score;
 	public Text scoreText;
+	public bool usingController;
 
 
 
@@ -30,10 +31,18 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+		movement ();
+	}
+
+	void movement() {
+		float horizontal;
 		rb.velocity = Vector3.zero;
-		float horizontal = Input.GetAxis (this.gameObject.name + "Strafe");
-		rb.position += (this.transform.right * horizontal * speed * Time.deltaTime);
-		//this.transform.Translate(Vector3.right * horizontal * speed * Time.deltaTime);
+		if (usingController)
+			horizontal = Input.GetAxis (this.gameObject.name + "Strafe-Controller");
+		else
+			horizontal = Input.GetAxis (this.gameObject.name + "Strafe");
+		if (Mathf.Abs(horizontal) > 0.1)
+			rb.position += (this.transform.right * horizontal * speed * Time.deltaTime);
 	}
 
 	void OnCollisionEnter(Collision col)
