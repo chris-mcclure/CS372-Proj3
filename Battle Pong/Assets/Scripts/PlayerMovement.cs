@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
 	public Text scoreText;
 	public bool usingController;
 	bool canMove;
+	Vector3 defaultPos;
 
 	// Use this for initialization
 	void Awake () {
@@ -29,10 +30,13 @@ public class PlayerMovement : MonoBehaviour {
 
 		//set these here just in case someone forgot to do something in the GUI
 		rb.drag = 10;
+		rb.mass = 500;
+		rb.isKinematic = false;
 	}
 
 	// Update is called once per frame
 	void FixedUpdate () {
+		//defaultPos = rb.position;
 		movement ();
 	}
 
@@ -58,8 +62,10 @@ public class PlayerMovement : MonoBehaviour {
 		Vector3 initialPos = rb.position;
 		rb.AddForce(rb.position.x * -force, 0 , rb.position.z * -force, ForceMode.Impulse);
 		yield return new WaitForSeconds(0.3f);
+		force += 500;
 		rb.AddForce(rb.position.x * force, 0, rb.position.z * force , ForceMode.Impulse);
 		yield return new WaitForSeconds(0.3f);
+		rb.velocity = Vector3.zero;
 		rb.position = initialPos;
 		canMove = true;
 	}
