@@ -19,38 +19,30 @@ public class BallMovement : MonoBehaviour {
 		rb.velocity = movement.normalized * speed;
 	}
 
+	void FixedUpdate()
+	{
+	}
 	void OnTriggerEnter (Collider c) {
 		ScoreKeeping ();
-		if (c.gameObject.tag == "GoalP1" || c.gameObject.tag == "GoalP2") {
+		if (c.gameObject.name == "GoalP1" || c.gameObject.name == "GoalP2") {
 			Destroy (gameObject);
-
 		}
 	}
 
 	void OnCollisionEnter (Collision c) {
-		if (c.gameObject.tag == "Player") { 
+		
+		if (c.gameObject.tag == "Player") {
 			lastHitBy = GameObject.Find (c.gameObject.name);
 		}
 
 	}
 
 	void ScoreKeeping() {
-		GameObject P1 = GameObject.Find ("PlayerPrefab (1)");
-		PlayerMovement P1Script = (PlayerMovement) P1.GetComponent(typeof(PlayerMovement));
-
-		GameObject P2 = GameObject.Find ("PlayerPrefab (2)");
-		PlayerMovement P2Script = (PlayerMovement) P2.GetComponent(typeof(PlayerMovement));
-
 		if (lastHitBy != null) {
-			if (lastHitBy.name == "PlayerPrefab (1)") {
-				P1Script.setScore (P1Script.getScore () + 1);
-				P2Script.setScore (P2Script.getScore () - 1);
-			}
-			if (lastHitBy.name == "PlayerPrefab (2)") {
-				P2Script.setScore (P2Script.getScore () + 1);
-				P1Script.setScore (P1Script.getScore () - 1);
-			}
-		}
-	}
+			PlayerMovement scoringPlayer = (PlayerMovement) lastHitBy.GetComponent(typeof(PlayerMovement));
+				scoringPlayer.setScore (scoringPlayer.getScore () + 1);
+				Debug.Log(scoringPlayer.gameObject.name + " scored!");
+		} 
+	} 
 
 }
