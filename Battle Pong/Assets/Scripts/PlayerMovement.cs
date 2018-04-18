@@ -11,6 +11,7 @@ public class Bounds
 
 public class PlayerMovement : MonoBehaviour {
 	public float speed = 0.5f;
+	private float saveSpeed;
 	public GameObject boundingLine;
 	public Bounds bounds;
 	private Rigidbody rb;
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour {
 	private int score;
 	public Text scoreText;
 	public bool usingController;
+	private Vector3 previousPosition;
 
 
 
@@ -39,20 +41,32 @@ public class PlayerMovement : MonoBehaviour {
 
 	void movement() {
 		float horizontal;
+		previousPosition = rb.position;
 		rb.velocity = Vector3.zero;
 		if (usingController)
 			horizontal = Input.GetAxis (this.gameObject.name + "Strafe-Controller");
 		else
 			horizontal = Input.GetAxis (this.gameObject.name + "Strafe");
+
 		if (Mathf.Abs(horizontal) > 0.1)
 			rb.position += (this.transform.right * horizontal * speed * Time.deltaTime);
 	}
 
+
+
+
 	void OnCollisionEnter(Collision col) {
-		
 		if(col.gameObject.tag == "Wall") {
-			Debug.Log ("Hit a wall!");
+			this.saveSpeed = speed;
+			this.speed = 1.0f;
 		}
+	}
+
+	void OnCollisionExit(Collision col){
+		if(col.gameObject.tag == "Wall") {
+			this.speed = saveSpeed;
+		}
+
 	}
 
 	public void setScore(int val) {
