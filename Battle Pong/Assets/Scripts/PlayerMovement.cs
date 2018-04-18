@@ -41,7 +41,6 @@ public class PlayerMovement : MonoBehaviour {
 
 	void movement() {
 		float horizontal;
-		previousPosition = rb.position;
 		rb.velocity = Vector3.zero;
 		if (usingController)
 			horizontal = Input.GetAxis (this.gameObject.name + "Strafe-Controller");
