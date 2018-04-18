@@ -29,6 +29,9 @@ public class PlayerMovement : MonoBehaviour {
 		setScore (0);
 	}
 
+	void Update() {
+	}
+
 	// Update is called once per frame
 	void FixedUpdate () {
 		movement ();
@@ -45,12 +48,10 @@ public class PlayerMovement : MonoBehaviour {
 			rb.position += (this.transform.right * horizontal * speed * Time.deltaTime);
 	}
 
-	void OnCollisionEnter(Collision col)
-	{
+	void OnCollisionEnter(Collision col) {
 		
-		if(col.gameObject.tag == "Wall")
-		{
-			//rb.velocity = Vector3.zero;
+		if(col.gameObject.tag == "Wall") {
+			Debug.Log ("Hit a wall!");
 		}
 	}
 
