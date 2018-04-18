@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour {
 	public Text scoreText;
 	public bool usingController;
 	bool canMove;
-	Vector3 defaultPos;
 
 	// Use this for initialization
 	void Awake () {
@@ -36,7 +35,6 @@ public class PlayerMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		//defaultPos = rb.position;
 		movement ();
 	}
 
@@ -49,7 +47,7 @@ public class PlayerMovement : MonoBehaviour {
 		if (Mathf.Abs(horizontal) > 0.1 && canMove)
 			rb.position += (this.transform.right * horizontal * speed * Time.deltaTime);
 
-		if(Input.GetButtonDown("Jump") && canMove)
+		if(Input.GetButtonDown(this.gameObject.name + "Push") && canMove)
 		{
 			canMove = false;
 			StartCoroutine(push());
