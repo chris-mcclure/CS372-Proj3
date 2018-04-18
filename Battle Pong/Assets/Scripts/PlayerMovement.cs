@@ -11,7 +11,6 @@ public class Bounds
 
 public class PlayerMovement : MonoBehaviour {
 	public float speed = 0.5f;
-	private float saveSpeed;
 	public GameObject boundingLine;
 	public Bounds bounds;
 	private Rigidbody rb;
@@ -19,7 +18,6 @@ public class PlayerMovement : MonoBehaviour {
 	private int score;
 	public Text scoreText;
 	public bool usingController;
-	private Vector3 previousPosition;
 
 
 
@@ -56,14 +54,11 @@ public class PlayerMovement : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col) {
 		if(col.gameObject.tag == "Wall") {
-			this.saveSpeed = speed;
-			this.speed = 1.0f;
 		}
 	}
 
 	void OnCollisionExit(Collision col){
-		if(col.gameObject.tag == "Wall") {
-			this.speed = saveSpeed;
+		if (col.gameObject.tag == "Wall") {
 		}
 
 	}
