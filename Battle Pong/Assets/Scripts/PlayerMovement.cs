@@ -10,7 +10,7 @@ public class Bounds
 }
 
 public class PlayerMovement : MonoBehaviour {
-	public float speed = 5f;
+	public float speed = 0.5f;
 	public GameObject boundingLine;
 	public Bounds bounds;
 	private Rigidbody rb;
@@ -29,18 +29,20 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
+		rb.velocity = Vector3.zero;
+		float horizontal = Input.GetAxis (this.gameObject.name + "Strafe");
+		rb.position += (this.transform.right * horizontal * speed * Time.deltaTime);
+		//this.transform.Translate(Vector3.right * horizontal * speed * Time.deltaTime);
+	}
 
-		float horizontal = Input.GetAxis ("Horizontal");
-		rb.position = new Vector3 (Mathf.Clamp (rb.position.x, bounds.xMin, bounds.xMax),
-								   0.0f,
-								   zVal
-								  );
-
-		this.transform.localPosition = new Vector3 (Mathf.Clamp (this.transform.localPosition.x + horizontal * speed * Time.deltaTime, bounds.xMin, bounds.xMax),
-												    0.0f,
-													zVal
-												   );
+	void OnCollisionEnter(Collision col)
+	{
+		
+		if(col.gameObject.tag == "Wall")
+		{
+			//rb.velocity = Vector3.zero;
+		}
 	}
 
 	public void setScore(int val) {
