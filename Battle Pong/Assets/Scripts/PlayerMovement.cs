@@ -71,13 +71,11 @@ public class PlayerMovement : MonoBehaviour {
 
 	IEnumerator push()
 	{
-		int force = 30000;
+		int force  = 30000;
+		rb.velocity = Vector3.zero;
 		Vector3 initialPos = rb.position;
 		Vector3 newPos = transform.forward;
-		if(newPos.x < initialPos.x || newPos.z < initialPos.z)
-		{
-			force = force * -1;
-		}
+		
 		rb.AddForce(newPos.x * force, 0 , newPos.z * force, ForceMode.Impulse);
 		yield return new WaitForSeconds(0.3f);
 		force += 1000;
