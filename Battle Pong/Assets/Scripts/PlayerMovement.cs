@@ -54,6 +54,8 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			canMove = false;
 			StartCoroutine(push());
+		}
+	}
 
 
 
