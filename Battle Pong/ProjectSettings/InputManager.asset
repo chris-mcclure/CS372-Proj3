@@ -310,6 +310,22 @@ InputManager:
     axis: 0
     joyNum: 1
   - serializedVersion: 3
+    m_Name: PlayerFourStrafe
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: b
+    positiveButton: m
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 100
+    dead: 0.001
+    sensitivity: 1000
+    snap: 1
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 1
+  - serializedVersion: 3
     m_Name: PlayerThreeStrafe
     descriptiveName: 
     descriptiveNegativeName: 
@@ -372,7 +388,6 @@ InputManager:
     invert: 0
     type: 2
     axis: 0
-    
     joyNum: 1
   - serializedVersion: 3
     m_Name: PlayerOnePush
@@ -412,6 +427,22 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: right shift
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 1000
+    dead: 0.001
+    sensitivity: 1000
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: PlayerFourPush
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: left alt
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000

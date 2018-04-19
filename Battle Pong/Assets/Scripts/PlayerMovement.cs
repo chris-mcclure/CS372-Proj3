@@ -11,10 +11,7 @@ public class Bounds
 
 public class PlayerMovement : MonoBehaviour {
 	public float speed = 0.5f;
-	public GameObject boundingLine;
-	public Bounds bounds;
 	private Rigidbody rb;
-	public float zVal;
 	private int score;
 	public Text scoreText;
 	public bool usingController;
