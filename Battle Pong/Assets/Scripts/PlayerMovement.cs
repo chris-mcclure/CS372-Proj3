@@ -33,6 +33,9 @@ public class PlayerMovement : MonoBehaviour {
 		rb.isKinematic = false;
 	}
 
+	void Update() {
+	}
+
 	// Update is called once per frame
 	void FixedUpdate () {
 		movement ();
@@ -51,6 +54,16 @@ public class PlayerMovement : MonoBehaviour {
 		{
 			canMove = false;
 			StartCoroutine(push());
+
+
+
+	void OnCollisionEnter(Collision col) {
+		if(col.gameObject.tag == "Wall") {
+		}
+	}
+
+	void OnCollisionExit(Collision col){
+		if (col.gameObject.tag == "Wall") {
 		}
 	}
 
