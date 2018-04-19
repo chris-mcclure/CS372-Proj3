@@ -3,14 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class Bounds
-{
-	public float xMin, xMax;
-}
-
 public class PlayerMovement : MonoBehaviour {
-	public float speed = 0.5f;
+	public float speed;
 	private Rigidbody rb;
 	private int score;
 	public Text scoreText;
@@ -23,7 +17,7 @@ public class PlayerMovement : MonoBehaviour {
 		score = 0;
 		setScore (0);
 		canMove = true;
-
+		speed = 55;
 		//set these here just in case someone forgot to do something in the GUI
 		rb.drag = 10;
 		rb.mass = 500;
@@ -68,12 +62,15 @@ public class PlayerMovement : MonoBehaviour {
 
 	IEnumerator push()
 	{
-		int force = 1500;
+		int force  = 30000;
+		rb.velocity = Vector3.zero;
 		Vector3 initialPos = rb.position;
-		rb.AddForce(rb.position.x * -force, 0 , rb.position.z * -force, ForceMode.Impulse);
+		Vector3 newPos = transform.forward;
+		
+		rb.AddForce(newPos.x * force, 0 , newPos.z * force, ForceMode.Impulse);
 		yield return new WaitForSeconds(0.3f);
-		force += 500;
-		rb.AddForce(rb.position.x * force, 0, rb.position.z * force , ForceMode.Impulse);
+		force += 1000;
+		rb.AddForce(newPos.x * force *-1 , 0, newPos.z * force * -1 , ForceMode.Impulse);
 		yield return new WaitForSeconds(0.3f);
 		rb.velocity = Vector3.zero;
 		rb.position = initialPos;
