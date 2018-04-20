@@ -50,14 +50,8 @@ public class PlayerMovement : MonoBehaviour {
 
 
 
-	void OnCollisionEnter(Collision col) {
-		if(col.gameObject.tag == "Wall") {
-		}
-	}
-
-	void OnCollisionExit(Collision col){
-		if (col.gameObject.tag == "Wall") {
-		}
+	void OnTriggerEnter(Collider col) {
+		rb.position += (this.transform.forward * 1);
 	}
 
 	IEnumerator push()
