@@ -37,7 +37,8 @@ public class BallMovement : MonoBehaviour {
 	void OnCollisionEnter (Collision c) {
 		if (c.gameObject.tag == "Player") {
 			lastHitBy = GameObject.Find (c.gameObject.name);
-			trail.SetColor ("_Color", lastHitBy.GetComponent<Renderer> ().sharedMaterial.GetColor("_Color"));
+			trail.SetColor ("_TintColor", lastHitBy.GetComponent<Renderer> ().sharedMaterial.GetColor("_Color"));
+			GetComponent<Light>().color = lastHitBy.GetComponent<Renderer> ().sharedMaterial.GetColor("_Color");
 		}
 
 	}
