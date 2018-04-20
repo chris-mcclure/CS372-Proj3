@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour {
 	public float speed;
 	private Rigidbody rb;
 	private int score;
+	private int winPoints = 0;
 	public Text scoreText;
 	public bool usingController;
 	bool canMove;
@@ -22,9 +23,12 @@ public class PlayerMovement : MonoBehaviour {
 		rb.drag = 10;
 		rb.mass = 500;
 		rb.isKinematic = false;
+		scoreText.resizeTextMaxSize = 1;
 	}
 
 	void Update() {
+		if (score > winPoints)
+			WinnerMode ();
 	}
 
 	// Update is called once per frame
@@ -80,5 +84,18 @@ public class PlayerMovement : MonoBehaviour {
 
 	public int getScore() {
 		return score;
+	}
+
+	public void WinnerMode() {
+		Color winColor = Random.ColorHSV (0f, 1f, 1f, 1f, 0.5f, 1f);
+		RectTransform textRect = scoreText.GetComponent<RectTransform> ();
+		GameObject floor = GameObject.Find ("Floor");
+		GetComponent<Renderer>().material.color = winColor;
+		floor.GetComponent<Renderer> ().material.color = winColor;
+		scoreText.color = winColor;
+		scoreText.text = this.gameObject.name + " is winner !!!";
+		//textRect.anchoredPosition = new Vector3 (0,0,0);
+		textRect.anchoredPosition = rb.position;
+		scoreText.fontSize = 100;
 	}
 }
