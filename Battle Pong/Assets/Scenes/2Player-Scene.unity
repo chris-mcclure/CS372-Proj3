@@ -484,7 +484,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4756337459024088, guid: 6c62c24b03bdb413ea374f87dd131c33, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.016
+      value: 3.02
       objectReference: {fileID: 0}
     - target: {fileID: 4756337459024088, guid: 6c62c24b03bdb413ea374f87dd131c33, type: 2}
       propertyPath: m_LocalPosition.y
@@ -492,7 +492,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4756337459024088, guid: 6c62c24b03bdb413ea374f87dd131c33, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 5.482
+      value: 5.48
       objectReference: {fileID: 0}
     - target: {fileID: 4756337459024088, guid: 6c62c24b03bdb413ea374f87dd131c33, type: 2}
       propertyPath: m_LocalRotation.x
@@ -516,11 +516,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4756337459024088, guid: 6c62c24b03bdb413ea374f87dd131c33, type: 2}
       propertyPath: m_LocalScale.x
-      value: 80.06496
+      value: 167.89427
       objectReference: {fileID: 0}
     - target: {fileID: 4756337459024088, guid: 6c62c24b03bdb413ea374f87dd131c33, type: 2}
       propertyPath: m_LocalScale.y
-      value: 80.06496
+      value: 139.04483
       objectReference: {fileID: 0}
     - target: {fileID: 4756337459024088, guid: 6c62c24b03bdb413ea374f87dd131c33, type: 2}
       propertyPath: m_LocalScale.z
@@ -545,7 +545,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 988087515}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -553,7 +553,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 401ad4983cc206c4f923a26dd2542db1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
