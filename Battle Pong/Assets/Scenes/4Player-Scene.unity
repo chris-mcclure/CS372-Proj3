@@ -3013,8 +3013,13 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
+<<<<<<< HEAD
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
+=======
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+>>>>>>> e33f4ad419427134e325368d0b80480dfa5f0620
     m_LineSpacing: 1
   m_Text: 
 --- !u!222 &2012738561

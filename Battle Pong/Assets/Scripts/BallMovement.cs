@@ -55,6 +55,14 @@ public class BallMovement : MonoBehaviour {
 				scoringPlayer.setScore (scoringPlayer.getScore () + 1);
 				Debug.Log(scoringPlayer.gameObject.name + " scored!");
 		} 
+<<<<<<< HEAD
 	} 
+=======
+	}
+
+	GameObject getLastHitBy() {
+		return lastHitBy;
+	}
+>>>>>>> e33f4ad419427134e325368d0b80480dfa5f0620
 
 }

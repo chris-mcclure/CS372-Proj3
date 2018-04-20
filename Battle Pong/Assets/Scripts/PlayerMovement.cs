@@ -7,7 +7,11 @@ public class PlayerMovement : MonoBehaviour {
 	public float speed;
 	private Rigidbody rb;
 	private int score;
+<<<<<<< HEAD
 	private int winPoints = 10;
+=======
+	private int winPoints = 1;
+>>>>>>> e33f4ad419427134e325368d0b80480dfa5f0620
 	public Text scoreText;
 	public bool usingController;
 	bool canMove;
