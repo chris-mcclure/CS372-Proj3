@@ -95,7 +95,9 @@ public class PlayerMovement : MonoBehaviour {
 	public void WinnerMode() {
 		Color winColor = Random.ColorHSV (0f, 1f, 1f, 1f, 0.5f, 1f);
 		RectTransform textRect = scoreText.GetComponent<RectTransform> ();
+		GameObject floor = GameObject.Find ("Floor");
 		GetComponent<Renderer>().material.color = winColor;
+		floor.GetComponent<Renderer> ().material.color = winColor;
 		scoreText.color = winColor;
 		scoreText.text = this.gameObject.name + " is winner !!!";
 		//textRect.anchoredPosition = new Vector3 (0,0,0);
