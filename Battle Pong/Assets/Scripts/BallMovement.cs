@@ -7,13 +7,14 @@ public class BallMovement : MonoBehaviour {
 	private Material trail;
 	private GameObject lastHitBy = null;
 	public float speed = 10f;
-
+	float timeSinceHit;
 	private Vector3 movement;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
 		trail = GetComponent<TrailRenderer> ().material;
+		timeSinceHit = 0;
 		float moveIntialX = Random.Range (-0.9f, 0.9f);
 		float moveIntialZ = Random.Range (-1.0f, 1.0f);
 
@@ -23,15 +24,19 @@ public class BallMovement : MonoBehaviour {
 
 	void FixedUpdate()
 	{
+		if(Time.time - timeSinceHit > 5)
+		{
+			rb.velocity = rb.velocity * 1.0005f;
+		}
 	}
 	void OnTriggerEnter (Collider c) {
+		timeSinceHit = 0;
 		ScoreKeeping ();
 		for (int i=1; i < 9; i++) {
 			if (c.gameObject.name == "GoalP"+i)  {
 				Destroy (gameObject);
 			}
 		}
-
 	}
 
 	void OnCollisionEnter (Collision c) {
@@ -39,6 +44,7 @@ public class BallMovement : MonoBehaviour {
 			lastHitBy = GameObject.Find (c.gameObject.name);
 			trail.SetColor ("_TintColor", lastHitBy.GetComponent<Renderer> ().sharedMaterial.GetColor("_Color"));
 			GetComponent<Light>().color = lastHitBy.GetComponent<Renderer> ().sharedMaterial.GetColor("_Color");
+			timeSinceHit = Time.time;
 		}
 
 	}
