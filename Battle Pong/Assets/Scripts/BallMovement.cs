@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BallMovement : MonoBehaviour {
 	private Rigidbody rb;
+	private Material trail;
 	private GameObject lastHitBy = null;
 	public float speed = 10f;
 
@@ -12,6 +13,7 @@ public class BallMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody> ();
+		trail = GetComponent<TrailRenderer> ().material;
 		float moveIntialX = Random.Range (-0.9f, 0.9f);
 		float moveIntialZ = Random.Range (-1.0f, 1.0f);
 
@@ -33,9 +35,9 @@ public class BallMovement : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision c) {
-		
 		if (c.gameObject.tag == "Player") {
 			lastHitBy = GameObject.Find (c.gameObject.name);
+			trail.SetColor ("_Color", lastHitBy.GetComponent<Renderer> ().sharedMaterial.GetColor("_Color"));
 		}
 
 	}
