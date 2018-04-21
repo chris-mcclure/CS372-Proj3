@@ -44,6 +44,8 @@ public class BallMovement : MonoBehaviour {
 			lastHitBy = GameObject.Find (c.gameObject.name);
 			trail.SetColor ("_TintColor", lastHitBy.GetComponent<Renderer> ().sharedMaterial.GetColor("_Color"));
 			GetComponent<Light>().color = lastHitBy.GetComponent<Renderer> ().sharedMaterial.GetColor("_Color");
+			GetComponent<ParticleSystem>().startColor = lastHitBy.GetComponent<Renderer> ().sharedMaterial.GetColor("_Color");
+			GetComponent<ParticleSystem>().Play();
 			timeSinceHit = Time.time;
 		}
 
@@ -55,6 +57,10 @@ public class BallMovement : MonoBehaviour {
 				scoringPlayer.setScore (scoringPlayer.getScore () + 1);
 				Debug.Log(scoringPlayer.gameObject.name + " scored!");
 		} 
-	} 
+	}
+
+	GameObject getLastHitBy() {
+		return lastHitBy;
+	}
 
 }
