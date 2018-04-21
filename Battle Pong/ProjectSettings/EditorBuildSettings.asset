@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/4Player-Scene.unity
     guid: d95a8dbdd081a0f48bfc03081e8c2194
+  - enabled: 1
+    path: Assets/Scenes/NetworkingScene.unity
+    guid: 74ca3247bd1d04e78900428240bb2de0
