@@ -62,7 +62,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2e651bfa59262364dbad5defa4dd95fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,28 +139,28 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.4
+  m_Time: 0.3
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 2
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 1
+        value: 0.8642864
         inSlope: 0
         outSlope: 0
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.36817098
-        value: 0.5990819
-        inSlope: -0.8907914
-        outSlope: -0.8907914
+        time: 0.5211098
+        value: 0.8562268
+        inSlope: 0.24800241
+        outSlope: 0.24800241
         tangentMode: 0
       - serializedVersion: 2
-        time: 0.95071566
-        value: 0.44285727
+        time: 0.9742447
+        value: 0.3000083
         inSlope: 0.051567305
         outSlope: 0.051567305
         tangentMode: 0
@@ -201,7 +201,7 @@ TrailRenderer:
     alignment: 0
     textureMode: 0
     generateLightingData: 0
-  m_MinVertexDistance: 0.5
+  m_MinVertexDistance: 0.2
   m_Autodestruct: 0
 --- !u!108 &108493831010680408
 Light:
@@ -211,14 +211,14 @@ Light:
   m_GameObject: {fileID: 1284645888124290}
   m_Enabled: 1
   serializedVersion: 8
-  m_Type: 3
+  m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.75
+  m_Intensity: 2
   m_Range: 10
-  m_SpotAngle: 30
+  m_SpotAngle: 179
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -226,13 +226,13 @@ Light:
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
-  m_DrawHalo: 1
+  m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_AreaSize: {x: 4, y: 4}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570

@@ -24,7 +24,7 @@ public class BallMovement : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		if(Time.time - timeSinceHit > 5)
+		if(Time.time - timeSinceHit > 6)
 		{
 			rb.velocity = rb.velocity * 1.0005f;
 		}
