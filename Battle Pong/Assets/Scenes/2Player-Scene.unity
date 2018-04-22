@@ -1075,8 +1075,14 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114270005882106218, guid: e7db703b0034f45f9ac68aa570095759,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65258247378562394, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
+    - {fileID: 114270005882106218, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1155839601 stripped
@@ -1874,8 +1880,14 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 114270005882106218, guid: e7db703b0034f45f9ac68aa570095759,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65258247378562394, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
+    - {fileID: 114270005882106218, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1942316386 stripped
