@@ -8,6 +8,8 @@ TagManager:
   - GoalP2
   - Wall
   - Ball
+  - Goal
+  - GravField
   layers:
   - Default
   - TransparentFX

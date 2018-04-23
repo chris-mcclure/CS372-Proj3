@@ -38,8 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18165153, g: 0.2273066, b: 0.30741596, a: 1}
-  m_UseRadianceAmbientProbe: 0
+  m_IndirectSpecularColor: {r: 0.1816514, g: 0.22730643, b: 0.30741557, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -89,7 +88,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000008, guid: 91eb1ea0dfd5c844195da368884214c8,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 306992954}
   m_Layer: 0
   m_Name: GoalP2
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -980,11 +980,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4927480721798388, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4927480721798388, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4927480721798388, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
       propertyPath: m_LocalRotation.w
@@ -1083,6 +1083,12 @@ Prefab:
       propertyPath: m_LocalPlayerAuthority
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114150814472843978, guid: e7db703b0034f45f9ac68aa570095759,
+        type: 2}
+      propertyPath: gravField
+      value: 
+      objectReference: {fileID: 1603455410706602, guid: 04f968c666505ca4c9774b3e8d6457ef,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 65258247378562394, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
     - {fileID: 114270005882106218, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
@@ -1138,7 +1144,7 @@ GameObject:
   - component: {fileID: 1220081233}
   m_Layer: 0
   m_Name: GoalP1
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1755,15 +1761,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4927480721798388, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4927480721798388, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4927480721798388, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4927480721798388, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
       propertyPath: m_LocalRotation.w
@@ -1888,6 +1894,16 @@ Prefab:
     - target: {fileID: 114270005882106218, guid: e7db703b0034f45f9ac68aa570095759,
         type: 2}
       propertyPath: m_LocalPlayerAuthority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114150814472843978, guid: e7db703b0034f45f9ac68aa570095759,
+        type: 2}
+      propertyPath: gravField
+      value: 
+      objectReference: {fileID: 1603455410706602, guid: 04f968c666505ca4c9774b3e8d6457ef,
+        type: 2}
+    - target: {fileID: 4927480721798388, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

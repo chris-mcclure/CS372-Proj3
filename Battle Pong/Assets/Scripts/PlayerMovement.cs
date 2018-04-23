@@ -11,13 +11,19 @@ public class PlayerMovement : MonoBehaviour {
 	public Text scoreText;
 	public bool usingController;
 	bool canMove;
+	public GameObject gravField;
+	bool gravUsable;
+	private Vector3 initialPos;
+
 
 	// Use this for initialization
 	void Awake () {
 		rb = GetComponent<Rigidbody> ();
+		initialPos = rb.position;
 		score = 0;
 		setScore (0);
 		canMove = true;
+		gravUsable = true;
 		speed = 55;
 		//set these here just in case someone forgot to do something in the GUI
 		rb.drag = 10;
@@ -50,14 +56,27 @@ public class PlayerMovement : MonoBehaviour {
 			canMove = false;
 			StartCoroutine(push());
 		}
+		if(Input.GetButtonDown(this.gameObject.name + "Grav") && gravUsable)
+		{
+			gravUsable = false;
+			StartCoroutine(grav());
+		}
 	}
 
 
 
 	void OnTriggerEnter(Collider col) {
+		if(col.gameObject.tag == "Goal")
 		rb.position += (this.transform.forward * 1);
 	}
 
+	IEnumerator grav()
+	{
+		Instantiate(gravField, initialPos, transform.rotation);
+		yield return new WaitForSeconds(5f);
+		gravUsable = true;
+
+	}
 	IEnumerator push()
 	{
 		int force  = 30000;
