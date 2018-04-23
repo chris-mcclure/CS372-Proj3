@@ -1108,13 +1108,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 45.587, y: 157.93501, z: -49.592003}
-=======
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
->>>>>>> 5ea28aa2f6fdaaa0b58f41f65eac06bd22d124a8
 --- !u!1 &907585705 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1577261067361162, guid: 6c62c24b03bdb413ea374f87dd131c33,
