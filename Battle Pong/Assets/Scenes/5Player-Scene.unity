@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3372549, g: 0.4156863, b: 0.15294118, a: 1}
+  m_Color: {r: 0.95686275, g: 0.9490196, b: 0.1764706, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3865,7 +3865,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 44.2
+  orthographic size: 46.78
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
