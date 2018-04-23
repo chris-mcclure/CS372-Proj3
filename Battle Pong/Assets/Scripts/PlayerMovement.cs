@@ -1,11 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
+
 
 public class PlayerMovement : MonoBehaviour {
 	public float speed;
 	private Rigidbody rb;
+	private AudioSource audioSource;
 	private int score;
 	private int winPoints = 10;
 	public Text scoreText;
@@ -14,11 +17,13 @@ public class PlayerMovement : MonoBehaviour {
 	public GameObject gravField;
 	bool gravUsable;
 	private Vector3 initialPos;
+	public AudioClip[] audioClip;
 
 
 	// Use this for initialization
 	void Awake () {
 		rb = GetComponent<Rigidbody> ();
+		audioSource = GetComponent<AudioSource> ();
 		initialPos = rb.position;
 		score = 0;
 		setScore (0);
@@ -63,6 +68,12 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
+	public void playSound(int clip)
+	{
+		audioSource.clip = audioClip [clip];
+		audioSource.Play ();
+
+	}
 
 
 	void OnTriggerEnter(Collider col) {
@@ -105,7 +116,12 @@ public class PlayerMovement : MonoBehaviour {
 		return score;
 	}
 
+	public int getWinPoints(){
+		return winPoints;
+	}
+
 	public void WinnerMode() {
+		
 		Color winColor = Random.ColorHSV (0f, 1f, 1f, 1f, 0.5f, 1f);
 		RectTransform textRect = scoreText.GetComponent<RectTransform> ();
 		GameObject floor = GameObject.Find ("Floor");
@@ -113,8 +129,11 @@ public class PlayerMovement : MonoBehaviour {
 		floor.GetComponent<Renderer> ().material.color = winColor;
 		scoreText.color = winColor;
 		scoreText.text = this.gameObject.name + " is winner !!!";
+		//playSound (1);
 		//textRect.anchoredPosition = new Vector3 (0,0,0);
 		textRect.anchoredPosition = rb.position;
 		scoreText.fontSize = 100;
+		Time.timeScale = 0f;
+
 	}
 }
