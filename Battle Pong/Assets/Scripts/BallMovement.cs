@@ -31,11 +31,17 @@ public class BallMovement : MonoBehaviour {
 	}
 	void OnTriggerEnter (Collider c) {
 		timeSinceHit = 0;
-		ScoreKeeping ();
-		for (int i=1; i < 9; i++) {
-			if (c.gameObject.name == "GoalP"+i)  {
-				Destroy (gameObject);
+		if(c.gameObject.tag == "Goal")
+		{
+			ScoreKeeping ();
+			for (int i=1; i < 9; i++) {
+				if (c.gameObject.name == "GoalP"+i)  {
+					Destroy (gameObject);
+				}
 			}
+		} else if (c.gameObject.tag == "GravField")
+		{
+			rb.velocity = rb.velocity * 0.1f;
 		}
 	}
 
