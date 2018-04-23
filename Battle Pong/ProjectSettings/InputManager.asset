@@ -581,7 +581,6 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 1
-<<<<<<< HEAD
   - serializedVersion: 3
     m_Name: PlayerFiveGrav
     descriptiveName: 
@@ -614,6 +613,3 @@ InputManager:
     type: 0
     axis: 0
     joyNum: 1
-=======
-    
->>>>>>> 743064c2d8062393ca1115d247348808ebd00a5c

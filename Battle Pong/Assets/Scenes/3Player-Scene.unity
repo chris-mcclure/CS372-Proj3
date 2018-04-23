@@ -566,19 +566,13 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 0
     m_StretchHeight: 0
-<<<<<<< HEAD
 --- !u!82 &305281458
 AudioSource:
-=======
---- !u!108 &305281458
-Light:
->>>>>>> 743064c2d8062393ca1115d247348808ebd00a5c
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 305281450}
   m_Enabled: 1
-<<<<<<< HEAD
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -652,37 +646,6 @@ Light:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-=======
-  serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 0, g: 0.9705882, b: 0.24766718, a: 1}
-  m_Intensity: 1.2
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
->>>>>>> 743064c2d8062393ca1115d247348808ebd00a5c
 --- !u!1 &312551404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1098,8 +1061,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.7411765, g: 0.69411767, b: 0.6117647, a: 1}
-  m_Intensity: 0.8
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1131,13 +1094,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 846010876}
-  m_LocalRotation: {x: -0.31219125, y: 0.8525383, z: -0.41918325, w: 0.00068602577}
-  m_LocalPosition: {x: -90, y: 8.3, z: 0}
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45.587, y: 157.93501, z: -49.592003}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &907585705 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1577261067361162, guid: 6c62c24b03bdb413ea374f87dd131c33,
@@ -1354,12 +1317,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 953390908}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 0.16299999, y: -0.49400026, z: -1}
+  m_LocalPosition: {x: 0.16299999, y: -0.4939998, z: -1}
   m_LocalScale: {x: 0.019999998, y: 5, z: 0.50000024}
   m_Children: []
   m_Father: {fileID: 1151023202}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: -90.00001}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!54 &953390910
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2602,19 +2565,13 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
 --- !u!82 &1443089089
 AudioSource:
-=======
---- !u!108 &1443089089
-Light:
->>>>>>> 743064c2d8062393ca1115d247348808ebd00a5c
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1443089080}
   m_Enabled: 1
-<<<<<<< HEAD
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -2688,37 +2645,6 @@ Light:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-=======
-  serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 0.7655113, g: 0.02378895, b: 0.8088235, a: 1}
-  m_Intensity: 1.2
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
->>>>>>> 743064c2d8062393ca1115d247348808ebd00a5c
 --- !u!1 &1526034657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2831,6 +2757,7 @@ GameObject:
   - component: {fileID: 1561004388}
   - component: {fileID: 1561004387}
   - component: {fileID: 1561004386}
+  - component: {fileID: 1561004391}
   m_Layer: 8
   m_Name: P2Wall_left (1)
   m_TagString: Wall
@@ -2919,6 +2846,38 @@ Transform:
   m_Father: {fileID: 1151023202}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!215 &1561004391
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1561004385}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 0
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 10, y: 10, z: 10}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
 --- !u!1 &1603497166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3294,19 +3253,13 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 2.3444672}
   m_Center: {x: -0.0000015258789, y: 0, z: 0.6722336}
-<<<<<<< HEAD
 --- !u!82 &1755230693
 AudioSource:
-=======
---- !u!108 &1755230693
-Light:
->>>>>>> 743064c2d8062393ca1115d247348808ebd00a5c
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1755230690}
   m_Enabled: 1
-<<<<<<< HEAD
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -3380,37 +3333,6 @@ Light:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-=======
-  serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 0.9338235, g: 0, b: 0, a: 1}
-  m_Intensity: 1.2
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
->>>>>>> 743064c2d8062393ca1115d247348808ebd00a5c
 --- !u!1 &1760493698
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,6 +3774,7 @@ GameObject:
   - component: {fileID: 2053496707}
   - component: {fileID: 2053496706}
   - component: {fileID: 2053496705}
+  - component: {fileID: 2053496710}
   m_Layer: 8
   m_Name: P2Wall_left (2)
   m_TagString: Wall
@@ -3940,6 +3863,38 @@ Transform:
   m_Father: {fileID: 1151023202}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!215 &2053496710
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2053496704}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 0
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 10, y: 10, z: 10}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
 --- !u!1 &2085280612
 GameObject:
   m_ObjectHideFlags: 0
