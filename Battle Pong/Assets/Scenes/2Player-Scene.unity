@@ -452,7 +452,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 41.769, y: 45, z: 0}
-<<<<<<< HEAD
 --- !u!1 &615419794
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,8 +721,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -27.839, y: 61.644005, z: 37.938004}
-=======
->>>>>>> 5ea28aa2f6fdaaa0b58f41f65eac06bd22d124a8
 --- !u!1 &800967462 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1090683599089216, guid: e7db703b0034f45f9ac68aa570095759,
@@ -779,8 +776,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-<<<<<<< HEAD
-=======
 --- !u!82 &800967469
 AudioSource:
   m_ObjectHideFlags: 0
@@ -995,7 +990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad1aa987e54542c2a0bfc1e545ab4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
->>>>>>> 5ea28aa2f6fdaaa0b58f41f65eac06bd22d124a8
 --- !u!1 &939536647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,7 +1793,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
-<<<<<<< HEAD
 --- !u!1 &1381895630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,7 +1969,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1398378178}
-=======
 --- !u!82 &1359629687
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2057,7 +2049,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
->>>>>>> 5ea28aa2f6fdaaa0b58f41f65eac06bd22d124a8
 --- !u!1 &1422485320
 GameObject:
   m_ObjectHideFlags: 0
