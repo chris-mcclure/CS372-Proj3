@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour {
 	private int winPoints = 10;
 	public Text scoreText;
 	public bool usingController;
+	public string inputIdentifier;
 	bool canMove;
 	public GameObject gravField;
 	bool gravUsable;
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		rb = GetComponent<Rigidbody> ();
+		inputIdentifier = gameObject.name;
 		audioSource = GetComponent<AudioSource> ();
 		initialPos = rb.position;
 		score = 0;
@@ -49,19 +51,18 @@ public class PlayerMovement : MonoBehaviour {
 
 	void movement() {
 		float horizontal;
-		if (usingController)
-			horizontal = Input.GetAxis (this.gameObject.name + "Strafe-Controller");
-		else
-			horizontal = Input.GetAxis (this.gameObject.name + "Strafe");
+		
+		horizontal = Input.GetAxis (inputIdentifier + "Strafe");
 		if (Mathf.Abs(horizontal) > 0.1 && canMove)
 			rb.position += (this.transform.right * horizontal * speed * Time.deltaTime);
 
-		if(Input.GetButtonDown(this.gameObject.name + "Push") && canMove)
+		if(Input.GetButtonDown(inputIdentifier + "Push") && canMove)
 		{
+			Debug.Log(inputIdentifier);
 			canMove = false;
 			StartCoroutine(push());
 		}
-		if(Input.GetButtonDown(this.gameObject.name + "Grav") && gravUsable)
+		if(Input.GetButtonDown(inputIdentifier + "Grav") && gravUsable)
 		{
 			gravUsable = false;
 			StartCoroutine(grav());
@@ -135,5 +136,8 @@ public class PlayerMovement : MonoBehaviour {
 		scoreText.fontSize = 100;
 		Time.timeScale = 0f;
 
+	}
+	public void setInput(string newInput) {
+		inputIdentifier = newInput;
 	}
 }

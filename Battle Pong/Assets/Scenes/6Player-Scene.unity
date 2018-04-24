@@ -884,6 +884,7 @@ MonoBehaviour:
   speed: 40
   scoreText: {fileID: 1936116265}
   usingController: 0
+  inputIdentifier: 
   gravField: {fileID: 1603455410706602, guid: 04f968c666505ca4c9774b3e8d6457ef, type: 2}
   audioClip:
   - {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
@@ -1794,6 +1795,7 @@ MonoBehaviour:
   speed: 40
   scoreText: {fileID: 562419512}
   usingController: 0
+  inputIdentifier: 
   gravField: {fileID: 1603455410706602, guid: 04f968c666505ca4c9774b3e8d6457ef, type: 2}
   audioClip:
   - {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
@@ -2296,6 +2298,7 @@ MonoBehaviour:
   speed: 40
   scoreText: {fileID: 269224841}
   usingController: 0
+  inputIdentifier: 
   gravField: {fileID: 1603455410706602, guid: 04f968c666505ca4c9774b3e8d6457ef, type: 2}
   audioClip:
   - {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
@@ -4000,6 +4003,10 @@ Prefab:
       propertyPath: audioClip.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
+    - target: {fileID: 1090683599089216, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65258247378562394, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
@@ -4935,6 +4942,10 @@ Prefab:
       propertyPath: audioClip.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
+    - target: {fileID: 1090683599089216, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 65258247378562394, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
