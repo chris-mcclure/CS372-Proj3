@@ -630,7 +630,6 @@ PlayerSettings:
   XboxOneSplashScreen: {fileID: 0}
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
-  XboxOneXTitleMemory: 8
   xboxOneScriptCompiler: 0
   vrEditorSettings:
     daydream:
@@ -640,9 +639,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 19d3d2b1-bb93-4c7c-8fe8-ae790d80cf7b
+  cloudProjectId: 7c9718c1-04d1-4108-9de5-230ba1542812
   projectName: Battle Pong
-  organizationId: awild1
+  organizationId: ajcarvajal
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		rb = GetComponent<Rigidbody> ();
-		inputIdentifier = gameObject.name;
+		inputIdentifier = GameInfo.inputMap[gameObject.name];
 		audioSource = GetComponent<AudioSource> ();
 		initialPos = rb.position;
 		score = 0;
@@ -58,7 +58,6 @@ public class PlayerMovement : MonoBehaviour {
 
 		if(Input.GetButtonDown(inputIdentifier + "Push") && canMove)
 		{
-			Debug.Log(inputIdentifier);
 			canMove = false;
 			StartCoroutine(push());
 		}
@@ -136,8 +135,5 @@ public class PlayerMovement : MonoBehaviour {
 		scoreText.fontSize = 100;
 		Time.timeScale = 0f;
 
-	}
-	public void setInput(string newInput) {
-		inputIdentifier = newInput;
 	}
 }

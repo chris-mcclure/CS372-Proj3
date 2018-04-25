@@ -7,6 +7,11 @@ public class LoadSceneOnClick : MonoBehaviour {
 
 	public void LoadOnClick(int sceneIndex) {
 
-		SceneManager.LoadScene (sceneIndex);
+		GameInfo.playerCount = sceneIndex;
+		if(sceneIndex == 0)
+		{
+			SceneManager.LoadScene (sceneIndex);
+		} else SceneManager.LoadScene("Controller Select");
+		//now that all scenes go to Controller Select first, I just changed it here -Aj
 	}
 }

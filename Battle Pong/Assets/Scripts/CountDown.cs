@@ -23,7 +23,6 @@ public class CountDown : MonoBehaviour {
 		float number2 = Time.realtimeSinceStartup + 4;
 		float number1 = Time.realtimeSinceStartup + 5;
 		float number0 = Time.realtimeSinceStartup + 6;
-		float numberNegOne = Time.realtimeSinceStartup + 7;
 
 		while (Time.realtimeSinceStartup < pauseEndTime) {
 			if (Time.realtimeSinceStartup <= number5)
