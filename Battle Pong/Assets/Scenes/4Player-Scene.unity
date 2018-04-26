@@ -1349,6 +1349,8 @@ MonoBehaviour:
   audioClip:
   - {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
   - {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
+  - {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+  - {fileID: 8300000, guid: 4b4dd7245f6104c8c8eb07ccf6b386ed, type: 3}
 --- !u!54 &356518539
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2537,7 +2539,7 @@ Prefab:
     - target: {fileID: 114150814472843978, guid: e7db703b0034f45f9ac68aa570095759,
         type: 2}
       propertyPath: audioClip.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4927480721798388, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2666,6 +2668,16 @@ Prefab:
       propertyPath: audioClip.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
+    - target: {fileID: 114150814472843978, guid: e7db703b0034f45f9ac68aa570095759,
+        type: 2}
+      propertyPath: audioClip.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+    - target: {fileID: 114150814472843978, guid: e7db703b0034f45f9ac68aa570095759,
+        type: 2}
+      propertyPath: audioClip.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b4dd7245f6104c8c8eb07ccf6b386ed, type: 3}
     m_RemovedComponents:
     - {fileID: 65258247378562394, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
     - {fileID: 114270005882106218, guid: e7db703b0034f45f9ac68aa570095759, type: 2}
@@ -3918,6 +3930,8 @@ MonoBehaviour:
   audioClip:
   - {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
   - {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
+  - {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+  - {fileID: 8300000, guid: 4b4dd7245f6104c8c8eb07ccf6b386ed, type: 3}
 --- !u!54 &1294649406
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5020,6 +5034,8 @@ MonoBehaviour:
   audioClip:
   - {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
   - {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
+  - {fileID: 8300000, guid: d46323e22e74e46baa241cbf48c85671, type: 3}
+  - {fileID: 8300000, guid: 4b4dd7245f6104c8c8eb07ccf6b386ed, type: 3}
 --- !u!54 &1789220392
 Rigidbody:
   m_ObjectHideFlags: 0

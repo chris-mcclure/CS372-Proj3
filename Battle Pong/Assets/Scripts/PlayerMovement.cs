@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private int winPoints = 10;
     public Text scoreText;
     public AbilityCooldowns abilityBar;
+	Light light;
     public bool usingController;
     public string inputIdentifier;
     bool canMove;
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         abilityBar = scoreText.GetComponentInChildren<AbilityCooldowns>();
         inputIdentifier = GameInfo.inputMap[gameObject.name];
         audioSource = GetComponent<AudioSource>();
+		
         initialPos = rb.position;
         score = 0;
         setScore(0);
@@ -42,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
         //set ability cooldowns
         abilityBar.skills[0].cooldown = 10; //push cooldown
         abilityBar.skills[1].cooldown = 25; //gravity cooldown
+		//configure light settings
+		light = GetComponent<Light>();
+		light.color = GetComponent<Renderer> ().sharedMaterial.GetColor("_Color");
+		light.intensity = 1.5f;
+		light.range = 15;
 
     }
 
