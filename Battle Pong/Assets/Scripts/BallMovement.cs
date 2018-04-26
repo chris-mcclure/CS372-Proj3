@@ -38,7 +38,7 @@ public class BallMovement : MonoBehaviour {
 		timeSinceHit = 0;
 		if(c.gameObject.tag == "Goal"){
 			if (lastHitBy != null) {
-				if(!c.transform.IsChildOf(lastHitBy.transform))
+				if(c.gameObject.name != GameInfo.goalMap[lastHitBy.name])
 				ScoreKeeping ();
 			}
 			Destroy (gameObject);

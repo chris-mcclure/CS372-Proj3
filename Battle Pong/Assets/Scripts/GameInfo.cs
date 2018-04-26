@@ -17,4 +17,16 @@ public class GameInfo {
 		{"PlayerSeven", "PlayerSeven"},
 		{"PlayerEight", "PlayerEight"},
 	};
+
+	static public Dictionary<string, string> goalMap = new Dictionary<string, string>(8)
+	{
+		{"PlayerOne", "GoalP1"},
+		{"PlayerTwo", "GoalP2"},
+		{"PlayerThree", "GoalP3"},
+		{"PlayerFour", "GoalP4"},
+		{"PlayerFive", "GoalP5"},
+		{"PlayerSix", "GoalP6"},
+		{"PlayerSeven", "GoalP7"},
+		{"PlayerEight", "GoalP8"},
+	};
 }
