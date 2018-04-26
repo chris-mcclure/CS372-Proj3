@@ -12,11 +12,11 @@ public class PlayerMovement : MonoBehaviour {
 	private int score;
 	private int winPoints = 10;
 	public Text scoreText;
+	public AbilityCooldowns abilityBar;
 	public bool usingController;
 	public string inputIdentifier;
 	bool canMove;
 	public GameObject gravField;
-	bool gravUsable;
 	private Vector3 initialPos;
 	public AudioClip[] audioClip;
 
@@ -24,19 +24,23 @@ public class PlayerMovement : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		rb = GetComponent<Rigidbody> ();
+		abilityBar = scoreText.GetComponentInChildren<AbilityCooldowns>();
 		inputIdentifier = GameInfo.inputMap[gameObject.name];
 		audioSource = GetComponent<AudioSource> ();
 		initialPos = rb.position;
 		score = 0;
 		setScore (0);
 		canMove = true;
-		gravUsable = true;
 		speed = 55;
 		//set these here just in case someone forgot to do something in the GUI
 		rb.drag = 10;
 		rb.mass = 500;
 		rb.isKinematic = false;
 		scoreText.resizeTextMaxSize = 1;
+		//set ability cooldowns
+		abilityBar.skills[0].cooldown = 10; //push cooldown
+		abilityBar.skills[1].cooldown = 25; //gravity cooldown
+
 	}
 
 	void Update() {
@@ -56,15 +60,16 @@ public class PlayerMovement : MonoBehaviour {
 		if (Mathf.Abs(horizontal) > 0.1 && canMove)
 			rb.position += (this.transform.right * horizontal * speed * Time.deltaTime);
 
-		if(Input.GetButtonDown(inputIdentifier + "Push") && canMove)
+		if(Input.GetButtonDown(inputIdentifier + "Push") && canMove && abilityBar.AbilityReady(0))
 		{
+			abilityBar.StartCooldown(0);
 			canMove = false;
 			StartCoroutine(push());
 		}
-		if(Input.GetButtonDown(inputIdentifier + "Grav") && gravUsable)
+		if(Input.GetButtonDown(inputIdentifier + "Grav") && abilityBar.AbilityReady(1))
 		{
-			gravUsable = false;
-			StartCoroutine(grav());
+			abilityBar.StartCooldown(1);
+			Instantiate(gravField, initialPos, transform.rotation);
 		}
 	}
 
@@ -79,14 +84,6 @@ public class PlayerMovement : MonoBehaviour {
 	void OnTriggerEnter(Collider col) {
 		if(col.gameObject.tag == "Goal")
 		rb.position += (this.transform.forward * 1);
-	}
-
-	IEnumerator grav()
-	{
-		Instantiate(gravField, initialPos, transform.rotation);
-		yield return new WaitForSeconds(5f);
-		gravUsable = true;
-
 	}
 	IEnumerator push()
 	{
