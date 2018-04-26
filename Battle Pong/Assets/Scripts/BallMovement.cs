@@ -29,7 +29,7 @@ public class BallMovement : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		if(Time.time - timeSinceHit > 7)
+		if(Time.time - timeSinceHit > 7) //in case ball gets stuck in the middle
 		{
 			rb.velocity = rb.velocity * 1.00005f;
 		}
@@ -44,7 +44,7 @@ public class BallMovement : MonoBehaviour {
 			Destroy (gameObject);
 		} 
 		else if (c.gameObject.tag == "GravField"){
-			rb.velocity = rb.velocity * 0.1f;
+			rb.velocity = rb.velocity * 0.2f;
 		}
 	}
 
@@ -73,9 +73,9 @@ public class BallMovement : MonoBehaviour {
 		PlayerMovement scoringPlayer = (PlayerMovement) lastHitBy.GetComponent(typeof(PlayerMovement));
 		scoringPlayer.setScore (scoringPlayer.getScore () + 1);
 		if (scoringPlayer.getScore () <= 10 ) {
-			scoringPlayer.playSound (0);
+			scoringPlayer.playSound (0,1);
 		} else if (scoringPlayer.getScore () == 11)
-			scoringPlayer.playSound (1);
+			scoringPlayer.playSound (1,1);
 		Debug.Log(scoringPlayer.gameObject.name + " scored!");
 		lastHitBy = null;
 	}
