@@ -38,8 +38,15 @@ public class BallMovement : MonoBehaviour {
 		timeSinceHit = 0;
 		if(c.gameObject.tag == "Goal")
 		{
-			ScoreKeeping ();
-			Destroy(gameObject);
+			Debug.Log(lastHitBy.transform.name[6]);
+			if (lastHitBy != null && lastHitBy.transform.name [6] != c.gameObject.transform.name [5]) {
+				ScoreKeeping ();
+			}
+			for (int i=1; i < 9; i++) {
+				if (c.gameObject.name == "GoalP"+i)  {
+					Destroy (gameObject);
+				}
+			}
 		} else if (c.gameObject.tag == "GravField")
 		{
 			rb.velocity = rb.velocity * 0.1f;
