@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 113612525}
   m_Layer: 0
   m_Name: GoalP6
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,8 +238,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 113612523}
   m_LocalRotation: {x: -0, y: 0.92387956, z: -0, w: 0.38268343}
-  m_LocalPosition: {x: 7.3971157, y: 3.2724075, z: -61.181824}
-  m_LocalScale: {x: 60.000053, y: 0, z: 0}
+  m_LocalPosition: {x: 8, y: 3.7, z: -60.6}
+  m_LocalScale: {x: 44.436337, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2037832004}
   m_RootOrder: 5
@@ -1380,7 +1380,7 @@ GameObject:
   - component: {fileID: 347598119}
   m_Layer: 0
   m_Name: GoalP4
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1392,8 +1392,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 347598117}
   m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -30.502882, y: 3.2724075, z: -59.781822}
-  m_LocalScale: {x: 60, y: 0, z: 0}
+  m_LocalPosition: {x: -29.8, y: 3.7, z: -60.5}
+  m_LocalScale: {x: 42.57264, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2037832004}
   m_RootOrder: 3
@@ -2995,7 +2995,7 @@ GameObject:
   - component: {fileID: 692235671}
   m_Layer: 0
   m_Name: GoalP5
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3007,8 +3007,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 692235669}
   m_LocalRotation: {x: -0, y: 0.92387956, z: -0, w: 0.38268343}
-  m_LocalPosition: {x: -28.902884, y: 3.2724075, z: 41.718178}
-  m_LocalScale: {x: 60.00003, y: 0, z: 0}
+  m_LocalPosition: {x: -29.1, y: 3.7, z: 40}
+  m_LocalScale: {x: 41.050426, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2037832004}
   m_RootOrder: 4
@@ -3946,7 +3946,7 @@ GameObject:
   - component: {fileID: 945861895}
   m_Layer: 0
   m_Name: GoalP8
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3957,13 +3957,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 945861893}
-  m_LocalRotation: {x: -0, y: 0.38268337, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -31.402903, y: 3.2724075, z: -59.78183}
-  m_LocalScale: {x: 60.000114, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 38.6, y: 3.7, z: -28.4}
+  m_LocalScale: {x: 40.35774, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2037832004}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!65 &945861895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5071,7 +5071,7 @@ GameObject:
   - component: {fileID: 1438383249}
   m_Layer: 0
   m_Name: GoalP2
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5083,8 +5083,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1438383247}
   m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 41.097122, y: 3.2724075, z: 7.718178}
-  m_LocalScale: {x: 60, y: 0, z: 0}
+  m_LocalPosition: {x: 38.3, y: 3.7, z: 7.5}
+  m_LocalScale: {x: 40.353058, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2037832004}
   m_RootOrder: 1
@@ -6071,7 +6071,7 @@ GameObject:
   - component: {fileID: 1764351402}
   m_Layer: 0
   m_Name: GoalP1
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6083,8 +6083,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1764351400}
   m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: 8.097116, y: 3.2724075, z: 40.918175}
-  m_LocalScale: {x: 60, y: 0, z: 0}
+  m_LocalPosition: {x: 7.1, y: 3.7, z: 39.9}
+  m_LocalScale: {x: 42.011383, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2037832004}
   m_RootOrder: 0
@@ -6155,7 +6155,7 @@ GameObject:
   - component: {fileID: 1765826540}
   m_Layer: 0
   m_Name: GoalP7
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6167,8 +6167,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1765826538}
   m_LocalRotation: {x: -0, y: 0.92387956, z: -0, w: 0.38268343}
-  m_LocalPosition: {x: -62.70288, y: 3.2724075, z: 7.9181786}
-  m_LocalScale: {x: 60.000107, y: 0, z: 0}
+  m_LocalPosition: {x: -60.9, y: 3.7, z: 7.7}
+  m_LocalScale: {x: 41.62462, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2037832004}
   m_RootOrder: 6
@@ -6514,7 +6514,7 @@ GameObject:
   - component: {fileID: 2145603416}
   m_Layer: 0
   m_Name: GoalP3
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6526,8 +6526,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2145603414}
   m_LocalRotation: {x: -0, y: 0.38268343, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -62.20288, y: 3.2724075, z: -28.381823}
-  m_LocalScale: {x: 60, y: 0, z: 0}
+  m_LocalPosition: {x: -62.20288, y: 3.7, z: -28.381823}
+  m_LocalScale: {x: 43.820225, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2037832004}
   m_RootOrder: 2
