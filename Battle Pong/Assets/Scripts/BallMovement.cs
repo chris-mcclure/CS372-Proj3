@@ -29,26 +29,21 @@ public class BallMovement : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		if(Time.time - timeSinceHit > 6)
+		if(Time.time - timeSinceHit > 7)
 		{
-			rb.velocity = rb.velocity * 1.0005f;
+			rb.velocity = rb.velocity * 1.00005f;
 		}
 	}
 	void OnTriggerEnter (Collider c) {
 		timeSinceHit = 0;
-		if(c.gameObject.tag == "Goal")
-		{
-			Debug.Log(lastHitBy.transform.name[6]);
-			if (lastHitBy != null && lastHitBy.transform.name [6] != c.gameObject.transform.name [5]) {
+		if(c.gameObject.tag == "Goal"){
+			if (lastHitBy != null) {
+				if(!c.transform.IsChildOf(lastHitBy.transform))
 				ScoreKeeping ();
 			}
-			for (int i=1; i < 9; i++) {
-				if (c.gameObject.name == "GoalP"+i)  {
-					Destroy (gameObject);
-				}
-			}
-		} else if (c.gameObject.tag == "GravField")
-		{
+			Destroy (gameObject);
+		} 
+		else if (c.gameObject.tag == "GravField"){
 			rb.velocity = rb.velocity * 0.1f;
 		}
 	}
@@ -75,15 +70,14 @@ public class BallMovement : MonoBehaviour {
 
 
 	void ScoreKeeping() {
-		if (lastHitBy != null) {
-			PlayerMovement scoringPlayer = (PlayerMovement) lastHitBy.GetComponent(typeof(PlayerMovement));
-			scoringPlayer.setScore (scoringPlayer.getScore () + 1);
-			if (scoringPlayer.getScore () <= 10 ) {
-				scoringPlayer.playSound (0);
-			} else if (scoringPlayer.getScore () == 11)
-				scoringPlayer.playSound (1);
-			Debug.Log(scoringPlayer.gameObject.name + " scored!");
-		} 
+		PlayerMovement scoringPlayer = (PlayerMovement) lastHitBy.GetComponent(typeof(PlayerMovement));
+		scoringPlayer.setScore (scoringPlayer.getScore () + 1);
+		if (scoringPlayer.getScore () <= 10 ) {
+			scoringPlayer.playSound (0);
+		} else if (scoringPlayer.getScore () == 11)
+			scoringPlayer.playSound (1);
+		Debug.Log(scoringPlayer.gameObject.name + " scored!");
+		lastHitBy = null;
 	}
 		
 

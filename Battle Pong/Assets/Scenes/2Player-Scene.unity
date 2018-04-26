@@ -218,7 +218,7 @@ Transform:
   m_LocalScale: {x: 71.92753, y: 4, z: 2.2416708}
   m_Children: []
   m_Father: {fileID: 1174635941}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!54 &284615571
 Rigidbody:
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 306992955}
   - component: {fileID: 306992954}
   m_Layer: 0
-  m_Name: GoalP2
+  m_Name: GoalP1
   m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -313,11 +313,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 306992952}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -30.2}
-  m_LocalScale: {x: 30, y: 0, z: 0}
+  m_LocalPosition: {x: -0.07447052, y: 0, z: -2.1000004}
+  m_LocalScale: {x: 3.75, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 1174635941}
-  m_RootOrder: 1
+  m_Father: {fileID: 1942316386}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &306992954
 BoxCollider:
@@ -1440,8 +1440,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1220081232}
-  - {fileID: 306992953}
   - {fileID: 1422485321}
   - {fileID: 284615570}
   m_Father: {fileID: 0}
@@ -1459,7 +1457,7 @@ GameObject:
   - component: {fileID: 1220081234}
   - component: {fileID: 1220081233}
   m_Layer: 0
-  m_Name: GoalP1
+  m_Name: GoalP2
   m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1471,11 +1469,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1220081231}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 42.1}
-  m_LocalScale: {x: 30, y: 0, z: 0}
+  m_LocalRotation: {x: -1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -2.8999977}
+  m_LocalScale: {x: 3.75, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 1174635941}
+  m_Father: {fileID: 1155839601}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1220081233
@@ -1946,7 +1944,7 @@ Transform:
   m_LocalScale: {x: 71.92748, y: 4, z: 2.241667}
   m_Children: []
   m_Father: {fileID: 1174635941}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1422485322
 BoxCollider:
