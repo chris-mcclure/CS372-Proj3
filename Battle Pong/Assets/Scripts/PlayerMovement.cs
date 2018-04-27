@@ -103,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
         if (col.gameObject.tag == "Goal")
             rb.position += (this.transform.forward * 1);
     }
+
     IEnumerator push()
     {
         //play sound effect but make it quieter
@@ -110,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         playSound(2, 0.03f);
 
         //get initial position so we can reset after
-        int force = 20000;
+        int force = 15000;
         rb.velocity = Vector3.zero;
         Vector3 initialPos = rb.position;
         Vector3 newPos = transform.forward;

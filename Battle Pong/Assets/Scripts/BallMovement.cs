@@ -26,14 +26,13 @@ public class BallMovement : MonoBehaviour {
 		rb.velocity = movement.normalized * speed;
 
 	}
-
-	void FixedUpdate()
-	{
+	void Update() {
 		if(Time.time - timeSinceHit > 7) //in case ball gets stuck in the middle
 		{
-			rb.velocity = rb.velocity * 1.0001f;
+			rb.velocity = rb.velocity * 1.001f;
 		}
 	}
+	
 	void OnTriggerEnter (Collider c) {
 		timeSinceHit = 0;
 		if(c.gameObject.tag == "Goal"){
@@ -86,8 +85,7 @@ public class BallMovement : MonoBehaviour {
 			scoringPlayer.playSound (1,1);
 		Debug.Log(scoringPlayer.gameObject.name + " scored!");
 		lastHitBy = null;
-	}
-		
+	}	
 
 	GameObject getLastHitBy() {
 		return lastHitBy;
