@@ -31,7 +31,7 @@ public class BallMovement : MonoBehaviour {
 	{
 		if(Time.time - timeSinceHit > 7) //in case ball gets stuck in the middle
 		{
-			rb.velocity = rb.velocity * 1.00005f;
+			rb.velocity = rb.velocity * 1.0001f;
 		}
 	}
 	void OnTriggerEnter (Collider c) {
@@ -44,7 +44,14 @@ public class BallMovement : MonoBehaviour {
 			Destroy (gameObject);
 		} 
 		else if (c.gameObject.tag == "GravField"){
+			movement = rb.velocity;
 			rb.velocity = rb.velocity * 0.2f;
+		}
+	}
+
+	void OnTriggerExit(Collider c) {
+		if(c.gameObject.tag == "GravField") {
+			rb.velocity = movement;
 		}
 	}
 
@@ -58,6 +65,7 @@ public class BallMovement : MonoBehaviour {
 			GetComponent<ParticleSystem>().startColor = lastHitBy.GetComponent<Renderer> ().sharedMaterial.GetColor("_Color");
 			GetComponent<ParticleSystem>().Play();
 			timeSinceHit = Time.time;
+			movement = rb.velocity;
 		}
 
 	}

@@ -36,14 +36,15 @@ public class PlayerMovement : MonoBehaviour
         setScore(0);
         canMove = true;
         speed = 55;
-        //set these here just in case someone forgot to do something in the GUI
         rb.drag = 10;
         rb.mass = 500;
         rb.isKinematic = false;
         scoreText.resizeTextMaxSize = 1;
+
         //set ability cooldowns
-        abilityBar.skills[0].cooldown = 10; //push cooldown
-        abilityBar.skills[1].cooldown = 25; //gravity cooldown
+        abilityBar.skills[0].cooldown = 5; //push cooldown
+        abilityBar.skills[1].cooldown = 20; //gravity cooldown
+
 		//configure light settings
 		light = GetComponent<Light>();
 		light.color = GetComponent<Renderer> ().sharedMaterial.GetColor("_Color");
@@ -80,8 +81,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetButtonDown(inputIdentifier + "Grav") && abilityBar.AbilityReady(1))
         {
-            abilityBar.StartCooldown(1); //start abillity cooldown
-			audioSource.pitch = 0.7f;
+            abilityBar.StartCooldown(1); //start ability cooldown
+			audioSource.pitch = 0.8f;
             playSound(3, 0.03f);
 			//create the grav field
             Instantiate(gravField, initialPos, transform.rotation);
@@ -109,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
         playSound(2, 0.03f);
 
         //get initial position so we can reset after
-        int force = 30000;
+        int force = 20000;
         rb.velocity = Vector3.zero;
         Vector3 initialPos = rb.position;
         Vector3 newPos = transform.forward;
