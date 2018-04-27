@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown(inputIdentifier + "Grav") && abilityBar.AbilityReady(1))
         {
             abilityBar.StartCooldown(1); //start abillity cooldown
+			audioSource.pitch = 0.7f;
             playSound(3, 0.03f);
 			//create the grav field
             Instantiate(gravField, initialPos, transform.rotation);
@@ -104,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator push()
     {
         //play sound effect but make it quieter
+		audioSource.pitch = 0.8f;
         playSound(2, 0.03f);
 
         //get initial position so we can reset after
