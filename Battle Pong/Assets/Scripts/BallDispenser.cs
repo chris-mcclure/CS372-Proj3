@@ -7,13 +7,13 @@ public class BallDispenser : MonoBehaviour {
 	public GameObject ball;
 	// Use this for initialization
 	void Awake () {
-		Instantiate (ball);
+		Instantiate (ball, transform.position, transform.rotation);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (GameObject.Find("BallPrefab(Clone)") == null) {
-			Instantiate (ball);
+			Instantiate (ball, transform.position, transform.rotation);
 		}
 	}
 }
