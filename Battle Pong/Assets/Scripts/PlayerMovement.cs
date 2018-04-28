@@ -48,8 +48,8 @@ public class PlayerMovement : MonoBehaviour
 		//configure light settings
 		light = GetComponent<Light>();
 		light.color = GetComponent<Renderer> ().sharedMaterial.GetColor("_Color");
-		light.intensity = 1f;
-		light.range = 20;
+		light.intensity = 0.8f;
+		light.range = 15;
 
     }
 
@@ -117,19 +117,19 @@ public class PlayerMovement : MonoBehaviour
         Vector3 newPos = transform.forward;
 
         //move the thing and change the light
-        GetComponent<Light>().intensity = 2f;
-        GetComponent<Light>().range = 25;
+        GetComponent<Light>().intensity = 1.5f;
+        GetComponent<Light>().range = 20;
         rb.AddForce(newPos.x * force, 0, newPos.z * force, ForceMode.Impulse);
         yield return new WaitForSeconds(0.3f);
-        GetComponent<Light>().intensity = 1.5f;
+        GetComponent<Light>().intensity = 1f;
         force += 1000;
         rb.AddForce(newPos.x * force * -1, 0, newPos.z * force * -1, ForceMode.Impulse);
         yield return new WaitForSeconds(0.3f);
         rb.velocity = Vector3.zero;
         rb.position = initialPos;
         canMove = true;
-        GetComponent<Light>().intensity = 1f;
-        GetComponent<Light>().range = 20;
+        GetComponent<Light>().intensity = 0.8f;
+        GetComponent<Light>().range = 15;
     }
 
     public void setScore(int val)
