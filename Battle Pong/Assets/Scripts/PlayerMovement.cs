@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private AudioSource audioSource;
     private int score;
-    private int winPoints = 10;
+    private int winPoints = 0;
     public Text scoreText;
     public AbilityCooldowns abilityBar;
 	Light light;
@@ -155,12 +155,12 @@ public class PlayerMovement : MonoBehaviour
 
         Color winColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         RectTransform textRect = scoreText.GetComponent<RectTransform>();
-        GameObject floor = GameObject.Find("Floor");
+        GameObject floor = GameObject.Find("platform");
         GetComponent<Renderer>().material.color = winColor;
         floor.GetComponent<Renderer>().material.color = winColor;
         scoreText.color = winColor;
         scoreText.text = this.gameObject.name + " is winner !!!";
-        //playSound (1);
+        //playSound (1,1);
         //textRect.anchoredPosition = new Vector3 (0,0,0);
         textRect.anchoredPosition = rb.position;
         scoreText.fontSize = 100;
