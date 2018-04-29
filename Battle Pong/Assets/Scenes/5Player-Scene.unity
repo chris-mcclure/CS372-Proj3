@@ -9517,7 +9517,7 @@ GameObject:
   - component: {fileID: 1573078674}
   - component: {fileID: 1573078673}
   m_Layer: 8
-  m_Name: New Game Object
+  m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11683,7 +11683,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh66278
+  m_Name: pb_Mesh114526
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
