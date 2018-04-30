@@ -79,9 +79,9 @@ public class BallMovement : MonoBehaviour {
 	void ScoreKeeping() {
 		PlayerMovement scoringPlayer = (PlayerMovement) lastHitBy.GetComponent(typeof(PlayerMovement));
 		scoringPlayer.setScore (scoringPlayer.getScore () + 1);
-		if (scoringPlayer.getScore () <= 10 ) {
+		if (scoringPlayer.getScore () <= scoringPlayer.getWinPoints() - 1) {
 			scoringPlayer.playSound (0,1);
-		} else if (scoringPlayer.getScore () == 11)
+		} else if (scoringPlayer.getScore () == scoringPlayer.getWinPoints())
 			scoringPlayer.playSound (1,1);
 		Debug.Log(scoringPlayer.gameObject.name + " scored!");
 		lastHitBy = null;
