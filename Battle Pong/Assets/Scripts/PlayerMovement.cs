@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (score > winPoints)
+        if (score > winPoints && !GameInfo.gameOver)
             WinnerMode();
     }
 
@@ -81,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetButtonDown(inputIdentifier + "Grav") && abilityBar.AbilityReady(1))
         {
+            Debug.Log(inputIdentifier + "Grav");
             abilityBar.StartCooldown(1); //start ability cooldown
 			audioSource.pitch = 0.8f;
             playSound(3, 0.03f);
@@ -152,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void WinnerMode()
     {
-
+        GameInfo.gameOver = true;
         Color winColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         RectTransform textRect = scoreText.GetComponent<RectTransform>();
         GameObject floor = GameObject.Find("platform");
@@ -160,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
         floor.GetComponent<Renderer>().material.color = winColor;
         scoreText.color = winColor;
         scoreText.text = this.gameObject.name + " is winner !!!";
-        //playSound (1,1);
+        playSound (1,1);
         //textRect.anchoredPosition = new Vector3 (0,0,0);
         textRect.anchoredPosition = rb.position;
         scoreText.fontSize = 100;

@@ -11,7 +11,7 @@ public class ControllerSelect : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		GameInfo.gameOver = false;
 		GameObject players = GameObject.Find("Players");
 		int childCount = players.transform.childCount;
 
