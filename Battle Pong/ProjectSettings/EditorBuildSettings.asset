@@ -35,3 +35,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/7Player-Scene_old.unity
     guid: 9f943d6e08c4d46fd8084c7b735b6069
+<<<<<<< HEAD
+=======
+  - enabled: 1
+    path: Assets/Scenes/8Player-Scene.unity
+    guid: 470efaf56231c400aaa0648d3d125b4d
+>>>>>>> 8d6ba2d5df7a2667b61489e3f92839b04aaadab6

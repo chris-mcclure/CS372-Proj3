@@ -11,7 +11,10 @@ public class ControllerSelect : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+<<<<<<< HEAD
 		GameInfo.gameOver = false;
+=======
+>>>>>>> 8d6ba2d5df7a2667b61489e3f92839b04aaadab6
 		GameObject players = GameObject.Find("Players");
 		int childCount = players.transform.childCount;
 
@@ -52,7 +55,8 @@ public class ControllerSelect : MonoBehaviour {
 	
 	}
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
 	}
+					
 }
