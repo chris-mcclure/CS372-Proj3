@@ -7,30 +7,30 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
-    private Rigidbody rb;
-    private AudioSource audioSource;
-    private int score;
-    private int winPoints = 11;
-    public Text scoreText;
-    public AbilityCooldowns abilityBar;
-	Light light;
-    public bool usingController;
-    public string inputIdentifier;
-    bool canMove;
-    public GameObject gravField;
-    private Vector3 initialPos;
-    public AudioClip[] audioClip;
+public float speed;
+private Rigidbody rb;
+private AudioSource audioSource;
+private int score;
+private int winPoints = 11;
+public Text scoreText;
+public AbilityCooldowns abilityBar;
+Light light;
+public bool usingController;
+public string inputIdentifier;
+bool canMove;
+public GameObject gravField;
+private Vector3 initialPos;
+public AudioClip[] audioClip;
 
 
-    // Use this for initialization
-    void Awake()
-    {
+// Use this for initialization
+void Awake()
+{
         rb = GetComponent<Rigidbody>();
         abilityBar = scoreText.GetComponentInChildren<AbilityCooldowns>();
         inputIdentifier = GameInfo.inputMap[gameObject.name];
         audioSource = GetComponent<AudioSource>();
-		
+
         initialPos = rb.position;
         score = 0;
         setScore(0);
@@ -45,75 +45,70 @@ public class PlayerMovement : MonoBehaviour
         abilityBar.skills[0].cooldown = 5; //push cooldown
         abilityBar.skills[1].cooldown = 20; //gravity cooldown
 
-		//configure light settings
-		light = GetComponent<Light>();
-		light.color = GetComponent<Renderer> ().sharedMaterial.GetColor("_Color");
-		light.intensity = 0.8f;
-		light.range = 15;
+        //configure light settings
+        light = GetComponent<Light>();
+        light.color = GetComponent<Renderer> ().sharedMaterial.GetColor("_Color");
+        light.intensity = 0.8f;
+        light.range = 15;
 
-    }
+}
 
-    void Update()
-    {
-<<<<<<< HEAD
+void Update()
+{
         if (score > winPoints && !GameInfo.gameOver)
-            WinnerMode();
-=======
-		if (score == winPoints)
-			WinnerMode ();
->>>>>>> 8d6ba2d5df7a2667b61489e3f92839b04aaadab6
-    }
+                WinnerMode();
+}
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
+// Update is called once per frame
+void FixedUpdate()
+{
         movement();
-    }
+}
 
-    void movement()
-    {
+void movement()
+{
         float horizontal;
 
         horizontal = Input.GetAxis(inputIdentifier + "Strafe");
         if (Mathf.Abs(horizontal) > 0.1 && canMove)
-            rb.position += (this.transform.right * horizontal * speed * Time.deltaTime);
+                rb.position += (this.transform.right * horizontal * speed * Time.deltaTime);
 
         if (Input.GetButtonDown(inputIdentifier + "Push") && canMove && abilityBar.AbilityReady(0))
         {
-            abilityBar.StartCooldown(0);
-            canMove = false;
-            StartCoroutine(push());
+                abilityBar.StartCooldown(0);
+                canMove = false;
+                StartCoroutine(push());
         }
         if (Input.GetButtonDown(inputIdentifier + "Grav") && abilityBar.AbilityReady(1))
         {
-            Debug.Log(inputIdentifier + "Grav");
-            abilityBar.StartCooldown(1); //start ability cooldown
-			audioSource.pitch = 0.8f;
-            playSound(3, 0.03f);
-			//create the grav field
-            Instantiate(gravField, initialPos, transform.rotation);
+                Debug.Log(inputIdentifier + "Grav");
+                abilityBar.StartCooldown(1); //start ability cooldown
+                audioSource.pitch = 0.8f;
+                playSound(3, 0.03f);
+                //create the grav field
+                Instantiate(gravField, initialPos, transform.rotation);
         }
-    }
+}
 
-    public void playSound(int clip, float volume)
-    {
-		audioSource.volume = volume;
+public void playSound(int clip, float volume)
+{
+        audioSource.volume = volume;
         audioSource.clip = audioClip[clip];
         audioSource.Play();
 
-    }
+}
 
 
-    void OnTriggerEnter(Collider col)
-    {
+void OnTriggerEnter(Collider col)
+{
         if (col.gameObject.tag == "Goal")
-            rb.position += (this.transform.forward * 1);
-    }
+                rb.position += (this.transform.forward * 1);
+}
 
-    IEnumerator push()
-    {
+IEnumerator push()
+{
         //play sound effect but make it quieter
-		audioSource.pitch = 0.8f;
+        audioSource.pitch = 0.8f;
         playSound(2, 0.03f);
 
         //get initial position so we can reset after
@@ -136,28 +131,28 @@ public class PlayerMovement : MonoBehaviour
         canMove = true;
         GetComponent<Light>().intensity = 0.8f;
         GetComponent<Light>().range = 15;
-    }
+}
 
-    public void setScore(int val)
-    {
+public void setScore(int val)
+{
         if (val < 0)
-            val = 0;
+                val = 0;
         score = val;
         scoreText.text = "Score : " + score.ToString();
-    }
+}
 
-    public int getScore()
-    {
+public int getScore()
+{
         return score;
-    }
+}
 
-    public int getWinPoints()
-    {
+public int getWinPoints()
+{
         return winPoints;
-    }
+}
 
-    public void WinnerMode()
-    {
+public void WinnerMode()
+{
         GameInfo.gameOver = true;
         Color winColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         RectTransform textRect = scoreText.GetComponent<RectTransform>();
@@ -165,16 +160,12 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<Renderer>().material.color = winColor;
         //floor.GetComponent<Renderer>().material.color = winColor;
         scoreText.color = winColor;
-<<<<<<< HEAD
         scoreText.text = this.gameObject.name + " is winner !!!";
         playSound (1,1);
-=======
-        scoreText.text = this.gameObject.name + " is winner !!!";;
->>>>>>> 8d6ba2d5df7a2667b61489e3f92839b04aaadab6
         //textRect.anchoredPosition = new Vector3 (0,0,0);
         textRect.anchoredPosition = rb.position;
         scoreText.fontSize = 100;
         Time.timeScale = 0f;
 
-    }
+}
 }
