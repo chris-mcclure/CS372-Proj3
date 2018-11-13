@@ -1,0 +1,20 @@
+I forgot to do my diary throughout the entire project but here are my thoughts on the process:
+
+  * Unity is a really powerful tool, and while the learning curve was there if you put in the time there is little you cannot 
+    figure out with some time and due diligence.
+  
+  * The platform itself was very useful as we had no issues moving between Linux, Macbook and Windows machines. One developer
+    had issues but I wouldn't take that as representative of the difficulties of platform development as there were a handful of 
+    us doing the majority of the development and all on different platforms with no issues.
+    
+  * Next time, use an input manager. The way we did input we would have to define 8 things if we wanted to just add one more
+    button to the game as they had to all be defined separately. There are assets and input manager addons but we just didn't
+    look into them in time.
+    
+  * Overall a very fun project to create, I spent more time on this than any other CS project up to this point including the 
+    game I had made in SFML for CS202. That game was plagued with development issues because SFML is a very finnicky library
+    whereas Unity is being actively developed and constantly improved. The documentation is great and while there are annoying 
+    things (like a lack of a dark theme if you don't have a paid subscription) it is overall a very powerful useful tool. 
+    ... If you put the time into learning it. Not even much time is necessary.
+    
+-Cameron K Titus
